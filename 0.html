@@ -1,7 +1,6 @@
-﻿<!doctype>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
 <style>
 body {
     margin:0;
@@ -9,27 +8,22 @@ body {
     font-family:Verdana;
     color:#363636;
 }
-.container{
-      display: flex;
-      flex-direction: column;
-}
 /*TOC헤더*/
 header{
-      padding-left:20px;
-      background-color:#ffffff;
-      color:#363636;
-      margin:auto;
-      width:65%;
+  background: #ffffff;
+  color:#363636;
+  display:inline-block;
+  width:100%;
 }
 .header-toc {
-      padding:30px 15px 10px 30px;
-      float:left;
-      font-size:35px;
-      font-weight: 700;
+  padding:30px 15px 10px 30px;
+  float:left;
+  font-size:35px;
+  font-weight: 700;
 }
 .header-toc2{
-      padding:50px 30px 0px 15px;
-      text-align:right
+  padding:50px 30px 0px 15px;
+  text-align:right
 }
 
 .sidenav {
@@ -80,7 +74,7 @@ header{
   padding: 0;
   margin: 0;
   line-height: 1;
-  padding-left:20%;
+  padding-left:17%;
 }
 /*상단바 메뉴 */
 .menu > ul {
@@ -265,7 +259,7 @@ header{
 .content{
       display:flex;
       margin:auto;
-      width:60%;
+      width:65%;
 }
 .content nav{
      border-right:1px solid #dcdcdc;
@@ -349,15 +343,16 @@ footer{
 #myBtn:hover {
   background-color: #555;
 }
-    </style>
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
-            <div class="header-toc2">Thinking of Coding</div>
-        </header>
-    <div class='menu'>
+<header>
+  <div style="padding: 0% 15% 0% 15%;">
+    <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+    <div class="header-toc2">Training of Coding</div>
+  </div>
+</header>
+<div class='menu'>
       <ul>
         <div id="mySidenav" class="sidenav">
            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -384,9 +379,6 @@ function closeNav() {
         <li class='active sub'>
           <a href='#'>WEB</a>
           <ul>
-            <li>
-              <a href='#'>WEB</a>
-            </li>
             <li class='sub'>
               <a href='#'>HTML</a>
               <ul>
@@ -445,13 +437,13 @@ function closeNav() {
                 <li>
                   <a href='#'>DataBase</a>
                 </li>
-                                <li>
+                <li>
                   <a href='#'>SQL</a>
                 </li>
                 <li>
                   <a href='#'>Node.js</a>
                 </li>
-                                <li class='last'>
+                <li class='last'>
                   <a href='#'>Linux</a>
                 </li>
               </ul>
@@ -473,6 +465,7 @@ function closeNav() {
                   <div class="menuitem"><a href="1.html">HTML</a></div>
                </div>
             </nav>
+
             <main>
                 <h2>WEB이란 무엇인가?</h2>
     <p>
@@ -500,9 +493,11 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </main>
         </section>
+
         <footer>
             Copyright &copy; w3schools.com<br>Copyright &copy; opentutorials.org
         </footer>
+
     </div>
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
