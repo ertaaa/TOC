@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -7,9 +7,62 @@
 }
 
 body {
-  margin: 0;
+    margin:0;
+    background: #ffffff;
+    font-family:Verdana;
+    color:#363636;
 }
+/*TOC헤더*/
+header{
+  background: #ffffff;
+  color:#363636;
+  display:inline-block;
+  width:100%;
+  position: sticky;
+  top: 0;
+}
+.header-toc {
+  padding:30px 15px 10px 30px;
+  float:left;
+  font-size:35px;
+  font-weight: 700;
+}
+.header-toc2{
+  padding:50px 30px 0px 15px;
+  text-align:right
+}
+/*상단바*/
+.topnav {
+    overflow: hidden;
+    background-color: #a37ec2;
+    position:fixed;
+    width:100%;
+    height:44px;
+    -webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    box-shadow: 0 1px 2px 0 #a083ba;
+    position: sticky;
+    top: 82px;
+    padding-left:17%;
+    padding-right:17%;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-family:Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 13px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: #a37ec2;
+    color:#363636;
+}
+.topnav .sign {float : right;}
 
+/*상단바 밑에*/
 .header3 {
     background-image: url(back1.jpg);
     overflow: hidden;
@@ -28,31 +81,6 @@ body {
     text-align : center;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #a37ec2;
-    position:fixed;
-    width:100%;
-    -webkit-box-shadow: 0 1px 2px 0 #a083ba;
-    box-shadow: 0 1px 2px 0 #a083ba;
-    position: sticky;
-    top: 82px;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 .column {
     float: left;
     padding: 10px 0px 10px 0px;
@@ -68,6 +96,7 @@ body {
 }
 .row {
   background: #f9f9f9;
+  font-family:none;
   padding-left:13%;
   padding-right:13%;
   padding-top: 30px;
@@ -98,49 +127,55 @@ body {
 </head>
 
 <body>
-<div style="background-color:#ffffff; color:#363636; display:inline-block; width:100%; position: sticky; top: 0; font-family:Verdana;color:#363636;">
-  <div style="padding:30px 15px 10px 30px; float:left; font-size:35px; font-weight: 700;">T<span style="color:#ce70f5">O</span><span>C</span></div>
-  <div style="padding:50px 30px 0px 15px; text-align:right">Thinking of Coding</div>
-</div>
-<div class="topnav" style="font-family:Verdana;color:#363636;">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-</div>
+    <header>
+      <div style="padding: 0 15% 0 15%;">
+        <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+        <div class="header-toc2">Training of Coding</div>
+      </div>
+    </header>
+    <nav class="topnav">
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+      <a href="#">JavaScript</a>
+      <a href="#">JAVA</a>
+      <a href="#">SURVER</a>
+      <a class="sign" href="#">로그인</a>
+    </nav>
+
 
 <div class="header3">
   <h1>TOC</h1>
-  <p>Thinking of Coding</p>
+  <p>Training of Coding</p>
 </div>
 
 <div class="header4">
-<div style="border:5px solid #ffffff; padding:30px 15px 30px 15px;">
-<p>누구나 쉽게 배울 수 있는 언어</p>
-<h1>오늘 당장 시작하세요!</h1>
-</div>
+  <div style="border:5px solid #ffffff; padding:30px 15px 30px 15px;">
+    <p>누구나 쉽게 배울 수 있는 언어</p>
+    <h1>오늘 당장 시작하세요!</h1>
+  </div>
 </div>
 
-<div class="row">
-  <div class="column side" style="border-left:2px solid #f1f1f1;">
+<article class="row">
+  <div class="column side" style="border-left: 2px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
     <h2>HTML</h2>
     <p>The basic language of web page</p>
     <button class="button button1">바로가기</button>
   </div>
-  <div class="column middle" style="border-left: 2px solid #f1f1f1; border-right: 2px solid #f1f1f1;">
+  <div class="column middle" style="border-left: 1px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
     <h2>CSS</h2>
     <p>Design your web page</p>
     <button class="button button2">바로가기</button>
   </div>
-  <div class="column side" style="border-right: 2px solid #f1f1f1;">
+  <div class="column side" style="border-left: 1px solid #f1f1f1; border-right: 2px solid #f1f1f1;">
     <h2>JavaScript</h2>
     <p>Make your web pages smarter</p>
     <button class="button button3">바로가기</button>
   </div>
-</div>
+</article>
 
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:0px;">Copyright &copy; w3schools.com
-<br>
-Copyright &copy; opentutorials.org</div>
+<footer style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:0px;">Copyright &copy; w3schools.com<br>
+Copyright &copy; opentutorials.org
+</footer>
 
 </body>
 </html>
