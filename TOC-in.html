@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TOC메인메이지</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background: #ffffff;
+    font-family:Verdana;
+    color:#363636;
+}
+/*TOC헤더*/
+header{
+  background: #ffffff;
+  color:#363636;
+  display:inline-block;
+  width:100%;
+  position: sticky;
+  top: 0;
+}
+.header-toc {
+  padding:30px 15px 10px 30px;
+  float:left;
+  font-size:35px;
+  font-weight: 700;
+}
+.header-toc2{
+  padding:50px 30px 0px 15px;
+  text-align:right
+}
+/*상단바*/
+.topnav {
+    overflow: hidden;
+    background-color: #a37ec2;
+    position:fixed;
+    width:100%;
+    height:44px;
+    -webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    box-shadow: 0 1px 2px 0 #a083ba;
+    position: sticky;
+    top: 82px;
+    padding-left:17%;
+    padding-right:17%;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-family:Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 13px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: #a37ec2;
+    color:#363636;
+}
+.topnav .sign {float : right;}
+
+/*상단바 밑에*/
+.header3 {
+    background-image: url(back1.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    font-size:x-large;
+    padding: 200px;
+    text-align: center;
+}
+.header4 {
+    background-color: #f1f1f1;
+    margin : 0;
+    padding: 5% 25% 5% 25%;
+    text-align : center;
+}
+
+.column {
+    float: left;
+    padding: 10px 0px 10px 0px;
+    text-align:center;
+}
+
+.column.side {
+    width: 33%;
+}
+
+.column.middle {
+    width: 33%;
+}
+.row {
+  background: #f9f9f9;
+  font-family:none;
+  padding-left:13%;
+  padding-right:13%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.button {
+    background-color: #a37ec2;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1, .button2, .button3 {border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1), 0 6px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+
+<body>
+    <header>
+      <div style="padding: 0 15% 0 15%;">
+        <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+        <div class="header-toc2">Training of Coding</div>
+      </div>
+    </header>
+    <nav class="topnav">
+      <a href="WEB.html">WEB</a>
+      <a href="#">SURVER</a>
+      <a href="#">JAVA</a>
+      <a href="#">ABOUT</a>
+      <a class="sign" href="TOC.html">로그아웃</a>
+    </nav>
+
+<div class="header3">
+  <h1>TOC</h1>
+  <p>Training of Coding</p>
+</div>
+
+<div class="header4">
+  <div style="border:5px solid #ffffff; padding:30px 15px 30px 15px;">
+    <p>누구나 쉽게 배울 수 있는 언어</p>
+    <h1>오늘 당장 시작하세요!</h1>
+  </div>
+</div>
+
+<article class="row">
+  <div class="column side" style="border-left: 2px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
+    <h2>HTML</h2>
+    <p>The basic language of web page</p>
+    <button class="button button1">바로가기</button>
+  </div>
+  <div class="column middle" style="border-left: 1px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
+    <h2>CSS</h2>
+    <p>Design your web page</p>
+    <button class="button button2">바로가기</button>
+  </div>
+  <div class="column side" style="border-left: 1px solid #f1f1f1; border-right: 2px solid #f1f1f1;">
+    <h2>JavaScript</h2>
+    <p>Make your web pages smarter</p>
+    <button class="button button3">바로가기</button>
+  </div>
+</article>
+
+<footer style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:0px;">Copyright &copy; w3schools.com<br>
+Copyright &copy; opentutorials.org
+</footer>
+
+</body>
+</html>

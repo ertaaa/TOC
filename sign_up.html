@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOC-Sign up</title>
+
+	<style>
+	body {
+		background-color : #f1f1f1;
+	}
+	#box {
+		background-color: #ffffff;
+		color:#363636;
+ 		margin: 100px auto;
+  		font-family: Raleway;
+  		padding: 40px;
+  		width: 350px;
+  		-webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    	box-shadow: 1px 1px 2px 0 #a083ba;
+	}
+	.header-toc {
+		font-family:Verdana;
+  		text-align:center;
+  		padding:0 0 15px 0;
+  		font-size:40px;
+  		font-weight: 700;
+	}
+	hr {
+    	border: 1px solid #f1f1f1;
+    	margin-bottom: 25px;
+	}
+	input {
+  		padding: 10px;
+  		width: 93%;
+  		font-size: 17px;
+  		font-family: Raleway;
+  		border: 1px solid #aaaaaa;
+  		margin:5px 0 25px 0;
+	}
+	input:focus {
+		background-color:#f4e8f8;
+	}
+	.container {width:100%;}
+    
+	.btn a {
+    	background-color: #a37ec2;
+    	border: none;
+    	color: white;
+    	padding: 15px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 5px;
+    	cursor: pointer;
+    	-webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    	box-shadow: 0 1px 2px 0 #a083ba;
+	}
+	</style>
+</head>
+<body>
+	<form id="box" action="#">
+		<div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+		<h2>회원가입</h2>
+		<hr>
+
+		<div class="container">
+			<label for="id"><b>Name</b></label>
+			<input type="text" placeholder="Full Name..." name="name" minlength=2 autocomplete="on" autofocus require>
+            
+            <label for="birth"><b>Birth date</b></label>
+			<input type="date" name="name" require>
+            
+            <label for="city"><b>City</b></label>
+			<input type="text" placeholder="City..." name="city" minlength=1 require>
+            
+            <label for="phone"><b>Phone</b></label>
+			<input type="text" placeholder="01012345678..." name="phone" pattern="^0\d{1,2}\d{3,4}\d{4}$" require>
+            
+			<div class="btn" style="overflow:auto;">
+				<a href="TOC.html">취소</a>
+            	<a href="sign_up2.html"style="float:right">다음 &raquo;</a>
+            	<a href="sign_ㅑㅜ.html"style="float:right">&laquo; 이전</a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

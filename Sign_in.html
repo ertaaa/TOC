@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOC-Sign in</title>
+
+	<style>
+	body {
+		background-color : #f1f1f1;
+	}
+	#box {
+		background-color: #ffffff;
+		color:#363636;
+ 		margin: 100px auto;
+  		font-family: Raleway;
+  		padding: 40px;
+  		width: 450px;
+  		-webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    	box-shadow: 1px 1px 2px 0 #a083ba;
+	}
+	.header-toc {
+		font-family:Verdana;
+  		text-align:center;
+  		padding:0 0 15px 0;
+  		font-size:40px;
+  		font-weight: 700;
+	}
+	hr {
+    	border: 1px solid #f1f1f1;
+    	margin-bottom: 25px;
+	}
+	input {
+  		padding: 10px;
+  		width: 95%;
+  		font-size: 17px;
+  		font-family: Raleway;
+  		border: 1px solid #aaaaaa;
+  		margin:5px 0 25px 0;
+	}
+	input:focus {
+		background-color:#f4e8f8;
+	}
+    .container {width:100%;}
+	.btn a {
+    	background-color: #a37ec2;
+    	border: none;
+    	color: white;
+    	padding: 15px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 5px;
+    	cursor: pointer;
+    	-webkit-box-shadow: 0 1px 2px 0 #a083ba;
+    	box-shadow: 0 1px 2px 0 #a083ba;
+	}
+	</style>
+</head>
+<body>
+	<form id="box" action="#">
+		<div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+		<h2>로그인</h2>
+		<p>아이디 : test@naver.com</p>
+		<p>비밀번호 : test123</p>
+		<hr>
+
+	<div class="container" style="width:100%">
+		<label for="id"><b>Email</b></label>
+		<input type="email" placeholder="Email..." name="id" minlength=4 autocomplete="on" autofocus require>
+
+		<label for="pw"><b>Password</b></label>
+		<input type="password" placeholder="Password..." name="pw" minlength=4 require>
+	
+		<div class="btn" style="overflow:auto;">
+			<a href="TOC.html">취소</a>
+            <a href="TOC-in.html" style="float:right">로그인</a>
+            <a href="sign_up.html" style="float:right">회원가입</a>
+		</div>
+    </div>
+	</form>
+</body>
+</html>
