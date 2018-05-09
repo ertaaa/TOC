@@ -225,6 +225,38 @@ header{
   transform: rotateY(180deg);
 }
 
+/*왼쪽 아이콘*/
+.icon-bar {
+    width: 60px;
+    left: -5px;
+    border-radius: 5px;
+    background-color: #a37ec2;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.icon-bar a:hover {
+  left: -5px;
+  border-radius: 5px;
+  background-color: #8d69ab;
+}
+a img {
+  vertical-align: middle;
+  width:100%;
+  padding : 5%;
+}
+
 /*상단바 밑에*/
 .content{
   display:flex;
@@ -430,6 +462,15 @@ footer{
     </li>
   </ul>
 </div>
+
+<div class="icon-bar">
+  <a href="TOC-in.html"><img src="icon1.png" width="15" height="17"></a> 
+  <a href="#"><img src="icon2.png" width="17" height="15"></a> 
+  <a href="#"><img src="icon3.png" width="14" height="20"></a> 
+  <a href="#"><img src="icon4.png" width="15" height="17"></a> 
+  <a href="#"><img src="icon5.png" width="15" height="17"></a> 
+</div>
+
 <section class="content">
   <div class="left-bar">
     <a class="active" href="WEB.html">WEB</a>
