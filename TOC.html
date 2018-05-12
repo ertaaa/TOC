@@ -21,6 +21,7 @@ header{
   width:100%;
   position: sticky;
   top: 0;
+  z-index : 300;
 }
 .header-toc {
   padding:30px 15px 10px 30px;
@@ -45,6 +46,7 @@ header{
     top: 82px;
     padding-left:17%;
     padding-right:17%;
+    z-index : 300;
 }
 .topnav a {
     float: left;
@@ -63,19 +65,29 @@ header{
 }
 .topnav .sign {float : right;}
 
+.search-container {
+  float: right;
+}
 .search {
-    width: 180px;
+    width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 13px;
-    background-color: white;
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
     padding: 7px 10px 7px 10px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    margin-top:6px;
+    margin-top : 5px;
+}
+.search:focus {
+    width: 180px;
+}
+.search-container button {
+  float: right;
+  padding: 7px 10px;
+  margin-top: 6px;
+  cursor: pointer;
+  border: none;
 }
 
 /*상단바 밑에*/
@@ -90,25 +102,127 @@ header{
     padding: 200px;
     text-align: center;
 }
+
+/*Start in order*/
+.start {
+  background-color:#fff;
+  position : relative;
+  height : 420px;
+}
+.start .o1 {
+  display : block;
+  font-size : 34px;
+  text-align : center;
+  padding : 60px 0 10px 0;
+}
+.start .o2 {
+  display : block;
+  font-size : 16px;
+  text-align : center;
+  padding : 0 0 15px 0;
+}
+.start .start-img {
+  display:block;
+  width:60%;
+  margin : auto;
+  text-align : center;
+}
+.start-img ul {
+  display : block;
+}
+.start-img li {
+  display : block;
+  width : 25%;
+  float : left;
+  position : relative;
+}
+.start-img .next {
+  display : inline-block;
+  top : 45%;
+  position: absolute;
+  right : -13px;
+}
+.start-img .logo-font {
+  display : block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size : 18px;
+  padding-top : 12px;
+}
+
+/*Check my status*/
+.self {
+  background: #efefef;
+  padding : 0 0 30px 0;
+}
+.self .chk1 {
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  padding: 40px 0 10px 0;
+}
+.self .chk2 {
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  color: #000;
+}
+.self .self-btn {
+  display : block;
+  width : 130px;
+  background-color: #a37ec2;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 30px auto 0 auto;
+}
+
+.double span {
+  padding : 0;
+  height : 370px;
+  width : 100%;
+  display : inline-block;
+  margin : 0 auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  position: relative;
+}
+
 .header4 {
-    background-color: #f1f1f1;
-    margin : 0;
-    padding: 5% 25% 5% 25%;
-    text-align : center;
+  background : radial-gradient(circle, #f1f1f1, white);
+  background-color : #f1f1f1;
+  margin : 0;
+  padding: 5% 25% 5% 25%;
+  text-align : center;
+}
+.header4 div {
+  border:5px solid #a37ec2;
+  padding:30px 15px 30px 15px;
+}
+.header4 span {
+  text-decoration-line : underline;
+  text-decoration-color : #deaef4;
+  text-decoration-style : wavy;
 }
 
 .column {
-    float: left;
-    padding: 10px 0px 10px 0px;
-    text-align:center;
+  float: left;
+  padding: 10px 0px 10px 0px;
+  text-align:center;
 }
 
 .column.side {
-    width: 33%;
+  width: 33%;
 }
 
 .column.middle {
-    width: 33%;
+  width: 33%;
 }
 .row {
   background: #f9f9f9;
@@ -120,55 +234,107 @@ header{
 }
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .button {
-    background-color: #a37ec2;
-    border: none;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: #a37ec2;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-.button1, .button2, .button3 {border-radius: 12px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1), 0 6px 50px 0 rgba(0,0,0,0.19);
+.button1, .button2, .button3 {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1), 0 6px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
 </head>
 
 <body>
-    <header>
-      <div style="padding: 0 15% 0 15%;">
-        <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
-        <div class="header-toc2">Training of Coding</div>
-      </div>
-    </header>
-    <nav class="topnav">
-      <a href="#">WEB</a>
-      <a href="#">SURVER</a>
-      <a href="#">JAVA</a>
-      <a href="#">ABOUT</a>
-      <a class="sign" href="sign_in.html">로그인</a>
+  <header>
+    <div style="padding: 0 15% 0 15%;">
+      <div class="header-toc">T<span style="color:#ce70f5">O</span>C</div>
+      <div class="header-toc2">Training of Coding</div>
+    </div>
+  </header>
+  <nav class="topnav">
+    <a href="#">WEB</a>
+    <a href="#">SURVER</a>
+    <a href="#">JAVA</a>
+    <a href="#">ABOUT</a>
+    <a class="sign" href="sign_in.html">로그인</a>
+    <div class="search-container">
       <form>
-        <input type="text" class="search" style="float:right;" name="search" placeholder="Search..">
+          <input type="text" class="search" name="search" placeholder="Search..">
+          <button type="button" style="background-color:#a37ec2;"><img src="searchicon.png" width="15" height="15"></button>
       </form>
-    </nav>
-
+    </div>
+  </nav>
 
 <div class="header3">
   <h1>TOC</h1>
   <p>Training of Coding</p>
 </div>
 
+<div class="start">
+  <span class="o1">Start in order</span>
+  <span class="o2">기초부터 심화까지 쉽게!</span>
+
+  <div class="start-img">
+    <ul class="cf" style="padding : 0;">
+      <li>
+        <img src="html-logo.png" width=110 height=155>
+        <span class="logo-font">STEP 01</span>
+        <img src="next.png" class="next" width=26 height=26>
+      </li>
+      <li>
+        <img src="css-logo.png" width=110 height=155>
+        <span class="logo-font">STEP 02</span>
+        <img src="next.png" class="next" width=26 height=26>
+      </li>
+      <li>
+        <img src="js-logo.png" width=110 height=155>
+        <span class="logo-font">STEP 03</span>
+        <img src="next.png" class="next" width=26 height=26>
+      </li>
+      <li>
+        <img src="php-logo.png" width=110 height=155>
+        <span class="logo-font">STEP 02</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="self">
+  <span class="chk1">Check my status</span>
+  <span class="chk2"><strong>간단한 확인을 통해 자신</strong>의 실력을 확인하세요.</span>
+  <a href="#" class="self-btn">Check !</a>
+</div>
+
+<div class="double" style ="height : 370px;">
+  <div style="width : 50%; float:left">
+    <span class="double-1" style ="background-image : url(double1-img1.jpg);">
+    <div style="text-align : center"><a href="#"><img src ="double1-img2.png"></a></div>
+    </span>
+  </div>
+
+  <div style="width : 50%; float:right">
+    <span class="double-2" style ="background-image : url(double2-img1.jpg);">
+    <div style="text-align : center"><a href="#"><img src ="double2-img2.png"></a></div>
+    </span>
+  </div>
+</div>
+
 <div class="header4">
-  <div style="border:5px solid #ffffff; padding:30px 15px 30px 15px;">
-    <p>누구나 쉽게 배울 수 있는 언어</p>
+  <div>
+    <p><span>누구나 쉽게</span> 배울 수 있는 언어부터</p>
     <h1>오늘 당장 시작하세요!</h1>
   </div>
 </div>
