@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TOC-Sign up</title>
+	<title>TOC-Sign in</title>
 
-	<style>
+<style>
 	body {
 		background-color : #f1f1f1;
 	}
@@ -13,7 +13,7 @@
  		margin: 100px auto;
   		font-family: Raleway;
   		padding: 40px;
-  		width: 350px;
+  		width: 450px;
   		-webkit-box-shadow: 0 1px 2px 0 #a083ba;
     	box-shadow: 1px 1px 2px 0 #a083ba;
 	}
@@ -30,7 +30,7 @@
 	}
 	input {
   		padding: 10px;
-  		width: 93%;
+  		width: 95%;
   		font-size: 17px;
   		font-family: Raleway;
   		border: 1px solid #aaaaaa;
@@ -39,8 +39,7 @@
 	input:focus {
 		background-color:#f4e8f8;
 	}
-	.container {width:100%;}
-    
+    .container {width:100%;}
 	.btn a {
     	background-color: #a37ec2;
     	border: none;
@@ -55,34 +54,28 @@
     	-webkit-box-shadow: 0 1px 2px 0 #a083ba;
     	box-shadow: 0 1px 2px 0 #a083ba;
 	}
-	</style>
+</style>
 </head>
+
 <body>
 	<form id="box" action="#">
 		<div class="header-toc">T<span style="color:#bb89ee">O</span>C</div>
-		<h2>회원가입</h2>
+		<p>로그인을 하시면 더욱 많은 컨텐츠를 이용하실 수 있습니다.^^</p>
 		<hr>
 
-		<div class="container">
-			<label for="id" style="margin-top:5px;"><b>Email</b></label>
-			<input type="email" placeholder="Email..." name="id" minlength=4 autocomplete="on" autofocus require>
+	<div class="container" style="width:100%">
+		<label for="id"><b>Email</b></label>
+		<input type="email" placeholder="Email..." name="id" minlength=4 autocomplete="on" autofocus require>
 
-			<label for="pw"><b>Password</b></label>
-			<input type="password" placeholder="Password..." name="pw" minlength=4 require>
-			<label for="conpw"><b>Confirm Password</b></label>
-			<input type="password" placeholder="Password..." name="pw" minlength=4 require>	
-
-			<div class="btn" style="overflow:auto;">
-				<a href="TOC.html">취소</a>
-            	<a href="TOC-in.html" style="float:right" onclick="myFunction()">가입하기</a>
-            	<script>
-					function myFunction() {
-    					alert("가입을 축하드립니다!\n메인페이지로 이동합니다.");
-					}
-				</script>
-            	<a href="sign_up.html" style="float:right">&laquo; 이전</a>
-			</div>
+		<label for="pw"><b>Password</b></label>
+		<input type="password" placeholder="Password..." name="pw" minlength=4 require>
+	
+		<div class="btn" style="overflow:auto;">
+			<a href="TOC.html">취소</a>
+            <a href="TOC-in.html" style="float:right">로그인</a>
+            <a href="sign_up.html" style="float:right">회원가입</a>
 		</div>
+    </div>
 	</form>
 </body>
 </html>

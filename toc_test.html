@@ -9,7 +9,7 @@ body {
   background: #ffffff;
   font-family:Verdana;
   color:#363636;
-  min-width: 1600px;
+  min-width: 1200px;
 }
 /*TOC헤더*/
 header{
@@ -212,17 +212,18 @@ header{
   float: right;
 }
 .search {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-    padding: 7px 10px 7px 10px;
-    transition: width 0.4s ease-in-out;
-    margin-top : 6px;
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 7px 10px 7px 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-top : 6px;
 }
 .search:focus {
-    width: 180px;
+  width: 180px;
 }
 .search-container button {
   float: right;
@@ -232,52 +233,17 @@ header{
   border: none;
 }
 
-/*왼쪽 아이콘*/
-.icon-bar {
-    width: 60px;
-    /*left: -5px;*/
-    border-radius: 0 5px 5px 0;
-    background-color: #a37ec2;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index : 800;
-}
-.icon-bar a {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    transition: all 0.3s ease;
-    color: white;
-}
-.icon-bar .icon-t:hover {
-  border-radius: 0 5px 0 0;
-  background-color: #8d69ab;
-}
-.icon-bar .icon-m:hover {
-  background-color: #8d69ab;
-}
-.icon-bar .icon-b:hover {
-  border-radius: 0 0 5px 0;
-  background-color: #8d69ab;
-}
-.icon-bar a img {
-  vertical-align: middle;
-  width:100%;
-  padding : 5%;
-}
-
 /*상단바 밑에*/
 .header3 {
-    background-image: url(images/back1.jpg);
-    overflow: hidden;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
-    font-size:x-large;
-    padding: 200px;
-    text-align: center;
+  background-image: url(images/back1.jpg);
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  font-size:x-large;
+  padding: 200px;
+  text-align: center;
 }
 
 /*Start in order*/
@@ -415,7 +381,7 @@ header{
   display: table;
   clear: both;
 }
-.row div a {
+.button {
   background-color: #a37ec2;
   border: none;
   color: white;
@@ -426,35 +392,18 @@ header{
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+.button1, .button2, .button3 {
   border-radius: 12px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1), 0 6px 50px 0 rgba(0,0,0,0.19);
-}
-
-/*위로가기 버튼*/
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #a083ba;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
-}
-#myBtn:hover {
-  background-color: #555;
 }
 </style>
 </head>
 
 <body>
   <header>
-   <div style="padding: 0% 15% 0% 15%;">
-     <a href="TOC-in.html" class="header-toc">T<span style="color:#bb89ee">O</span>C</a>
+   <div style="padding: 0 15%;">
+     <a href="TOC.html" class="header-toc">T<span style="color:#bb89ee">O</span>C</a>
      <div class="header-toc2">Training of Coding</div>
    </div>
   </header>
@@ -462,7 +411,7 @@ header{
   <div class='menu'>
    <ul>
      <li class='active sub'>
-        <a href='WEB.html'>WEB</a>
+        <a href='#'>WEB</a>
         <ul>
           <li class='sub'>
            <a href='#'>HTML</a>
@@ -542,7 +491,7 @@ header{
        <a href='#'>ABOUT</a>
       </li>
       <li class='last' style="float:right;">
-       <a href='TOC.html'>로그아웃</a>
+       <a href='sign_in.html'>로그인</a>
       </li>
       <div class="search-container">
        <form>
@@ -552,14 +501,6 @@ header{
       </div>
    </ul>
   </div>
-
-<div class="icon-bar">
-  <a href="TOC-in.html" class="icon-t"><img src="images/icon1.png" width="15" height="17"></a> 
-  <a href="#" class="icon-m"><img src="images/icon2.png" width="17" height="15"></a> 
-  <a href="#" class="icon-m"><img src="images/icon3.png" width="14" height="20"></a> 
-  <a href="#" class="icon-m"><img src="images/icon4.png" width="15" height="17"></a> 
-  <a href="#" class="icon-b"><img src="images/icon5.png" width="15" height="17"></a> 
-</div>
 
 <div class="header3">
   <h1>TOC</h1>
@@ -597,7 +538,7 @@ header{
 
 <div class="self">
   <span class="chk1">Check my status</span>
-  <span class="chk2"><strong>간단한 확인을 통해 자신</strong>의 위치를 확인하세요.</span>
+  <span class="chk2"><strong>간단한 확인을 통해 자신</strong>의 실력을 확인하세요.</span>
   <a href="#" class="self-btn">Check !</a>
 </div>
 
@@ -612,6 +553,7 @@ header{
   </div>
 </div>
 
+
 <div class="header4">
   <div>
     <p><span>누구나 쉽게</span> 배울 수 있는 언어부터</p>
@@ -623,40 +565,23 @@ header{
   <div class="column side" style="border-left: 2px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
     <h2>HTML</h2>
     <p>The basic language of web page</p>
-    <a href="#">바로가기</a>
+    <button class="button button1">바로가기</button>
   </div>
   <div class="column middle" style="border-left: 1px solid #f1f1f1; border-right: 1px solid #f1f1f1;">
     <h2>CSS</h2>
     <p>Design your web page</p>
-    <a href="#">바로가기</a>
+    <button class="button button2">바로가기</button>
   </div>
   <div class="column side" style="border-left: 1px solid #f1f1f1; border-right: 2px solid #f1f1f1;">
     <h2>JavaScript</h2>
     <p>Make your web pages smarter</p>
-    <a href="#">바로가기</a>
+    <button class="button button3">바로가기</button>
   </div>
 </article>
 
 <footer style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:0px;">Copyright &copy; w3schools.com<br>
 Copyright &copy; opentutorials.org
 </footer>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-<script>
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
 
 </body>
 </html>
