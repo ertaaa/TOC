@@ -212,20 +212,23 @@ header{
 /*왼쪽 아이콘*/
 .icon-bar {
     width: 60px;
-    /*left: -5px;*/
+    left: -30px;
     border-radius: 0 5px 5px 0;
     background-color: #a37ec2;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s;
 }
-
 .icon-bar a {
     display: block;
     text-align: center;
     padding: 20px;
     transition: all 0.3s ease;
     color: white;
+}
+.icon-bar:hover {
+  left: 0;
 }
 .icon-bar .icon-t:hover {
   border-radius: 0 5px 0 0;
@@ -321,12 +324,11 @@ main{
     border-radius: 4px;
     font-size: 13px;
     padding: 7px 10px 7px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    margin-top : 5px;
+    margin-top : 6px;
 }
 .search:focus {
-    width: 180px;
+  width: 180px;
 }
 .search-container button {
   float: right;

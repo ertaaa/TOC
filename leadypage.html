@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TOC-WEB</title>
+  <title>TOC-leady</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
@@ -208,19 +208,35 @@ header{
   transform: rotateY(180deg);
 }
 
-
-/*상단바 밑에*/
-.content{
-  display:block;
-  margin:auto;
-  width:65%;
+.search-container {
+  float: right;
 }
+.search {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 7px 10px 7px 10px;
+    transition: width 0.4s ease-in-out;
+    margin-top : 6px;
+}
+.search:focus {
+  width: 180px;
+}
+.search-container button {
+  float: right;
+  padding: 7px 10px;
+  margin-top: 6px;
+  cursor: pointer;
+  border: none;
+}
+
 .checkbox {
-  /*border : 1px solid #a37ec2;    없는게 예쁨*/
-  height : 217px; 
-  width : 1000px;
-  margin: 50px auto 20px;
-  background : url(images/ckbox.jpg) no-repeat 0 0;
+  height : 902px; 
+  width : 700px;
+  margin: 50px auto;
+  background : url(images/leadypage.jpg) no-repeat 0 0;
   text-align: center;
 }
 .checkbox span {
@@ -242,94 +258,6 @@ header{
   cursor: pointer;
 }
 
-.chkmenu { 
-  text-align : center;
-}
-.chkmenu a {
-  display : inline-block;
-  border: 2px solid #9a74a8;
-  border-radius: 4px;
-  color: #363636;
-  width : 120px;
-  padding: 15px;
-  margin : 0 20px;
-  text-align : center;
-  text-decoration : none;
-  cursor : pointer;
-}
-.chkmenu a:hover {
-  background-color : #9a74a8;
-  color : white;
-  transition: all .2s ease;
-}
-.chkmenu .chkitem1{
-  background-color : #9a74a8;
-  color : white;
-}
-
-.selfchk_list {
-  margin : 50px 0;
-  border-bottom : 1px solid #e8e8e8;
-}
-.selfchk_list .list {
-  border-top : 1px solid #b2b2b2;
-}
-.selfchk_list .list .title {
-  border-top : 1px solid #fff;
-  border-bottom : 1px solid #fff;
-  background : #f8f8f8;
-  padding : 15px 20px;
-  font-size : 15px;
-  color : #000;
-}
-.selfchk_list .list .cont {
-  border-top : 1px solid #e8e8e8;
-  padding : 25px;
-  background : #fff;
-  font-size : 15px;
-  color : #3a3a3a;
-}
-.selfchk_list .list .cont label {
-  margin : 10px;
-}
-.chknext a{
-  display : block;
-  background-color : #9a74a8;
-  border : none;
-  border-radius : 4px;
-  color : white;
-  width : 120px;
-  padding : 15px;
-  margin : 20px auto;
-  text-align : center;
-  text-decoration : none;
-  cursor : pointer;
-}
-
-.search-container {
-  float: right;
-}
-.search {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-    padding: 7px 10px 7px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    margin-top : 5px;
-}
-.search:focus {
-    width: 180px;
-}
-.search-container button {
-  float: right;
-  padding: 7px 10px;
-  margin-top: 6px;
-  cursor: pointer;
-  border: none;
-}
 
 footer{
   background-color:#e5e5e5;
@@ -450,7 +378,7 @@ footer{
       <a href='#'>ABOUT</a>
     </li>
     <li class='last' style="float:right;">
-      <a href='sign_in.html'>로그인</a>
+      <a href='TOC.html'>로그아웃</a>
     </li>
     <div class="search-container">
       <form>
@@ -462,6 +390,8 @@ footer{
 </div>
 
 <section class="content">
+
+<div class="checkbox"></div>
 
 </section>
 

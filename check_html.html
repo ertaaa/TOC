@@ -210,25 +210,30 @@ header{
 
 /*왼쪽 아이콘*/
 .icon-bar {
-    width: 60px;
-    /*left: -5px;*/
-    border-radius: 0 5px 5px 0;
-    background-color: #a37ec2;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+  width: 60px;
+  left: -30px;
+  border-radius: 0 5px 5px 0;
+  background-color: #a37ec2;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index : 800;
+  transition: 0.3s;
 }
-
 .icon-bar a {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    transition: all 0.3s ease;
-    color: white;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: white;
+}
+.icon-bar:hover {
+  left: 0;
 }
 .icon-bar .icon-t:hover {
   border-radius: 0 5px 0 0;
   background-color: #8d69ab;
+  left: 0;
 }
 .icon-bar .icon-m:hover {
   background-color: #8d69ab;
@@ -237,7 +242,7 @@ header{
   border-radius: 0 0 5px 0;
   background-color: #8d69ab;
 }
-a img {
+.icon-bar a img {
   vertical-align: middle;
   width:100%;
   padding : 5%;
@@ -505,7 +510,7 @@ footer{
 
 <section class="content">
 
-  <div style="border-bottom : 2px solid #a37ec2; width : 210px;"><h2>나의 실력 확인하기</h2></div>
+  <div style="border-bottom : 2px solid #a37ec2; width : 210px; display : block; text-align : center; margin : 0 auto;"><h2>나의 실력 확인하기</h2></div>
 
   <div class="checkbox">
     <div style="text-align : center; padding-top : 30px;">
