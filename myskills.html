@@ -450,11 +450,24 @@ input[type=button]:hover {
 }
 
 
-footer{
-  background-color:#e5e5e5;
-  text-align:center;
-  padding:10px;
-  margin-top:7px;
+footer {
+  background-color : #e5e5e5;
+  text-align : center;
+  padding : 30px;
+  margin-top : 0px;
+  font-weight: 400;
+  font-size : 12px;
+  height : 120px;
+}
+footer div {
+  text-align : center;
+}
+.ft_icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin : 0 10px;
 }
 
 
@@ -801,8 +814,19 @@ footer{
 </section>
 
 <footer>
-  Copyright &copy; w3schools.com<br>
-  Copyright &copy; opentutorials.org
+  <div>
+    강의 : 웹프로그래밍기초<br>
+    홈페이지명 : TOC | 개발자 : 이형준 | 학번 : 1312050<br><br>
+    <div style ="text-align : center; margin-bottom : 20px;">
+      <a href="#" class="ft_icon"><img src="images/google_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/fb_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/kakao_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/naver_icon.png" width="35" height="35"></a>
+  </div>
+    Copyright &copy; w3schools.com<br>
+    Copyright &copy; opentutorials.org
+  </div>
+  
 </footer>
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>

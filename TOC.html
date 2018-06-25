@@ -400,10 +400,7 @@ header{
 .row {
   background: #f9f9f9;
   font-family:none;
-  padding-left:13%;
-  padding-right:13%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding : 30px 13%;
 }
 
 .row:after {
@@ -426,6 +423,26 @@ header{
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1), 0 6px 50px 0 rgba(0,0,0,0.19);
 }
 
+
+footer {
+  background-color : #e5e5e5;
+  text-align : center;
+  padding : 30px;
+  margin-top : 0px;
+  font-weight: 400;
+  font-size : 12px;
+  height : 120px;
+}
+footer div {
+  text-align : center;
+}
+.ft_icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin : 0 10px;
+}
 
 /*위로가기 버튼*/
 #myBtn {
@@ -630,8 +647,20 @@ header{
   </div>
 </article>
 
-<footer style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:0px;">Copyright &copy; w3schools.com<br>
-Copyright &copy; opentutorials.org
+<footer>
+  <div>
+    강의 : 웹프로그래밍기초<br>
+    홈페이지명 : TOC | 개발자 : 이형준 | 학번 : 1312050<br><br>
+    <div style ="text-align : center; margin-bottom : 20px;">
+      <a href="#" class="ft_icon"><img src="images/google_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/fb_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/kakao_icon.png" width="35" height="35"></a>
+      <a href="#" class="ft_icon"><img src="images/naver_icon.png" width="35" height="35"></a>
+  </div>
+    Copyright &copy; w3schools.com<br>
+    Copyright &copy; opentutorials.org
+  </div>
+  
 </footer>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
