@@ -4,12 +4,42 @@
   <title>TOC메인페이지</title>
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
+.alert {
+    padding: 20px;
+    background-color: #f85757;
+    color: white;
+    text-align : left;
+    font-size: 12px;
+    width : 120px;
+    height : 150px;
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    z-index : 1200;
+    word-break : keep-all;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #363636;
+}
+
 body {
   margin:0;
   background: #ffffff;
   font-family:Verdana;
   color:#363636;
-  min-width: 1600px;
+  min-width: 1300px;
 }
 /*TOC헤더*/
 header{
@@ -419,6 +449,10 @@ header{
 </head>
 
 <body>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>주의!</strong><br><br>비로그인 시 check 페이지만 이용가능<br><br>로그인을 하시면 다른 페이지로 이동가능</div>
+
 <header>
   <div style="padding: 0 15%;">
     <a href="TOC.html" class="header-toc">T<span style="color:#bb89ee">O</span>C</a>

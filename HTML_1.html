@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>TOC-WEB</title>
+  <title>HTML-소개</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
@@ -321,8 +321,13 @@ main{
 }
 main p {
   line-height : 25px;
+  font-size : 14px;
 }
-
+main hr {
+  margin : 40px 0;
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+}
 .search-container {
   float: right;
 }
@@ -347,21 +352,31 @@ main p {
   border: none;
 }
 
-/*유튜브*/
-.movie {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+.code_bg {
+  background-color : #f1f1f1;
+  padding : 16px;
+  margin : 20px 0;
+  box-shadow : 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
-.video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  max-width: 100%;
-  max-height: 100%;
-  z-index : 100
+.code {
+  border-left : 3px solid #a37ec2;
+  background-color : #fff;
+  font-family: Consolas,"courier new";
+  font-size: 16px;
+  line-height: 1.5;
+  padding : 5px 10px;
+}
+.code span { margin : px 0; }
+.code_t { color : mediumblue; }
+.code_p, .code_e { color : brown; }
+.code_h { color : red; }
+
+.ex_img {
+  width : 480px;
+  height : 304px; 
+  margin: 20px auto;
+  background : url(images/ex_img.jpg) no-repeat 0 0;
+  float : left;
 }
 
 footer{
@@ -506,10 +521,10 @@ footer{
   <div class="left-bar">
     <h3 style="border-bottom: 3px solid #a37ec2; padding: 10px;">
     초보자<wbr> 맞춤형</h3>
-    <a class="active" href="WEB.html">WEB</a>
+    <a href="WEB.html" style="border-top : 1px solid #dcdcdc;">WEB</a>
     <a class="noactive">HTML<i class="fa fa-caret-down"></i></a>
       <div class="dropdown-container">
-        <a href="HTML_1">소개</a>
+        <a href="#" class="active">소개</a>
         <a href="#">기본구조</a>
         <a href="#">요소</a>
         <a href="#">속성</a>
@@ -531,10 +546,56 @@ footer{
   </div>
 
   <main>
-    <div style="border-bottom : 2px solid #a37ec2; width : 230px;"><h2>WEB이란 무엇인가?</h2></div>
-    <p style="text-indent : 10px;">World Wide Web (WWW 또는 웹)은 문서 및 기타 웹 자원이 URL (Uniform Resource Locators)에 의해 식별되고 하이퍼 텍스트 링크로 연결되며 인터넷을 통해 액세스 할 수있는 정보 공간입니다. 영국 과학자 팀 버너스 - 리 (Tim Berners-Lee)는 1989 년에 월드 와이드 웹 (World Wide Web)을 발명했습니다. 그는 스위스의 CERN에서 근무하면서 1990 년에 최초의 웹 브라우저 컴퓨터 프로그램을 저술했습니다. 웹 브라우저는 1991 년 1 월 시작한 다른 연구 기관과 1991 년 8 월 인터넷 일반인에게 1991 년 CERN 외부로 배포되었습니다.</p>
+    <div style="border-bottom : 2px solid #a37ec2; width : 250px;"><h2>HTML이란 무엇인가?</h2></div>
 
-    <div class="movie"><iframe allowfullscreen class="video" width="500" height="281" src="https://www.youtube.com/embed/tZooW6PritE" frameborder="0" gesture="media" allow="encrypted-media"></iframe></div>
+    <p style="text-indent : 10px;">HTML은 웹페이지를 만들기 위한 표준 마크 업 언어입니다.</p>
+
+    <ul style="line-height: 27px;">
+      <li>HTML은 하이퍼 텍스트 마크 업 언어</li>
+      <li>HTML은 마크 업을 사용하여 웹 페이지의 구조를 설명합니다.</li>
+      <li>HTML 요소는 HTML 페이지의 구성 요소입니다.</li>
+      <li>HTML 요소는 태그로 표현됩니다.</li>
+      <li>HTML 태그는 "heading", "paragraph", "table" 등과 같은 내용의 레이블을 표현합니다.</li>
+      <li>브라우저는 HTML 태그를 표시하지 않지만이를 사용하여 페이지의 내용을 렌더링합니다.</li>
+    </ul>
+
+    <hr>
+
+    <div style="border-bottom : 2px solid #a37ec2; width : 220px;"><h2>간단한 HTML 문서</h2></div>
+
+    <div class="code_bg">
+      <div class="code">
+        <span class="code_t"><</span><span class="code_p">!DOCTYPE <span class="code_h">html</span></span><span class="code_t">></span><br>
+        <span class="code_t"><</span><span class="code_p">html</span><span class="code_t">></span><br>
+        <span class="code_t"><</span><span class="code_p">head</span><span class="code_t">></span><br>
+        &emsp;<span class="code_t"><</span><span class="code_p">title</span><span class="code_t">></span>페이지 제목<span class="code_t"><</span><span class="code_p">title</span><span class="code_t">></span><br>
+        <span class="code_t"><</span><span class="code_p">/head</span><span class="code_t">></span><br>
+        <span class="code_t"><</span><span class="code_p">body</span><span class="code_t">></span><br><br>
+      
+        &emsp;<span class="code_t"><</span><span class="code_p">h1</span><span class="code_t">></span>나의 첫 제목<span class="code_t"><</span><span class="code_p">/h1</span><span class="code_t">></span><br>
+        &emsp;<span class="code_t"><</span><span class="code_p">p</span><span class="code_t">></span>나의 첫 단락<span class="code_t"></span><span class="code_p">/p</span><span class="code_t">></span><br><br>
+        <span class="code_t"><</span><span class="code_p">/body</span><span class="code_t">></span><br>
+        <span class="code_t"><</span><span class="code_p">/html</span><span class="code_t">></span>
+      </div>
+    </div>
+
+    <ul style="line-height: 27px;">
+      <li><span class="code_e">&lt;!DOCTYPE html&gt;</span>선언은 HTML5가 될이 문서를 정의</li>
+      <li><span class="code_e">&lt;html&gt;</span>요소는 HTML 페이지의 루트 요소입니다</li>
+      <li><span class="code_e">&lt;head&gt;</span>요소는 문서에 대한 메타 정보를 포함</li>
+      <li><span class="code_e">&lt;title&gt;</span>요소는 문서에 대한 메타 정보를 포함</li>
+      <li><span class="code_e">&lt;body&gt;</span>요소는 문서의 제목을 명시</li>
+      <li><span class="code_e">&lt;h1&gt;</span>요소는 큰 제목을 정의</li>
+      <li><span class="code_e">&lt;p&gt;</span>요소는 문단을 정의</li>
+    </ul>
+
+    <hr>
+
+    <div style="border-bottom : 2px solid #a37ec2; width : 375px;"><h2>간단한 HTML 문서 브라우저 출력</h2></div>
+    <p style="text-indent : 10px;">웹 브라우저(Chrome, IE, Firefox, Safari)의 목적은 HTML 문서를 읽고 표시하는 것입니다.<br>브라우저는 HTML 태그를 표시하지 않지만 HTML 태그를 사용하여 문서를 표시하는 방법을 결정합니다.</p>
+
+    <div class="ex_img"></div>
+
   </main>
 
 </section>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TOC-information</title>
+  <title>TOC-profile</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
+
 body {
   margin:0;
   background: #ffffff;
   font-family:Verdana;
   color:#363636;
-  min-width: 1600px;
+  min-width: 1300px;
 }
 /*TOC헤더*/
 header{
@@ -291,10 +292,10 @@ a img {
   margin-top:0px;
 }
 .left-bar a {
-  padding : 15px 2px 15px 15px;
+  padding : 12px 2px 15px 12px;
   border : none;
   border-bottom : 1px solid #dcdcdc;
-  font-size : 16px;
+  font-size : 12px;
   text-align:left;
   text-decoration: none;
   color:#363636;
@@ -303,17 +304,26 @@ a img {
   cursor: pointer;
   outline: none;
 }
+.left-bar .active {
+  background-color : #d9bef0;
+  color:#363636;
+  font-weight : bold;
+}
 .left-bar a:hover {
   background-color : #d9bef0;
   color:#363636;
+  font-weight : bold;
 }
 
-
-
-
 main{
-  padding:0 50px;
-  min-width:500px;
+  padding : 0 50px;
+  min-width : 600px;
+  max-width : 900px;
+}
+main hr {
+  margin : 40px 0;
+  border: 0;
+  border-top: 1px solid #e3e3e3;
 }
 
 .skillbar {
@@ -337,7 +347,7 @@ main{
 .table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: auto;
+    /*width : 500px;*/
     border: 1px solid #ddd;
     display : inline-block;
     margin : 60px 0 30px;
@@ -356,12 +366,12 @@ main{
 .table2 td, th {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
-.table2 .tb_title { text-overflow : ellipsis;}
-.table2 .tb_lge { width : 120px;}
-.table2 .tb_date { width : 100px;}
+.table2 .tb_title { text-overflow : ellipsis; text-align: left;}
+.table2 .tb_lge { width : 140px;}
+.table2 .tb_date { width : 120px;}
 
 .page_c { display : inline-block; margin-top : 10px;}
 .page_c a {
@@ -387,6 +397,56 @@ main{
   color: white;
   border: none;
   border-radius : 5px;
+}
+
+.contain {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin : 30px 0 50px 0;
+}
+.col-1 {
+    float: left;
+    text-align : center;
+    width: 80px;
+    margin-top: 6px;
+}
+.col-2 {
+    float: left;
+    width: 80%;
+    margin-top: 13px;
+    margin-left : 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#title, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=button] {
+    background-color: #a083ba;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right : 13px;
+    margin-top : 10px;
+}
+input[type=button]:hover {
+    background-color: #baa4ce;
 }
 
 
@@ -532,8 +592,8 @@ footer{
 <section class="content">
   <div class="left-bar">
     <h3 style="border-bottom: 3px solid #a37ec2; padding: 10px;">프로필</h3>
-    <a class="active" href="#">기본정보</a>
-    <a class="active" href="myskills.html" style="border-bottom: 2px solid #a37ec2; color: #363636; background-color : #d9bef0; ">현재 진행도</a>
+    <a class="noactive" href="#">기본정보</a>
+    <a class="active" href="myskills.html" style="background-color : #d9bef0;">현재 진행도</a>
   </div>
 
   <main>
@@ -544,7 +604,7 @@ footer{
     <p>JavaScript</p><div class="skillbar"> <div class="skills js">5%</div> </div>
     <p>PHP</p><div class="skillbar"> <div class="skills php">0%</div> </div>
 
-    <table class="table">
+    <table class="table" style="width: auto;">
       <tr>
         <th>Language</th>
       </tr>
@@ -565,8 +625,9 @@ footer{
 
 
 
-  <table class="table" style="overflow-x:scroll; width:600px">
+  <table class="table" style="overflow-x:scroll; width : 81%;">
     <tr>
+      <th>06/13</th>
       <th>06/14</th>
       <th>06/15</th>
       <th>06/16</th>
@@ -580,6 +641,7 @@ footer{
       <th>06/24</th>
     </tr>
     <tr>
+      <td>45</td>
       <td>50</td>
       <td>55</td>
       <td>60</td>
@@ -593,6 +655,7 @@ footer{
       <td>80</td>
     </tr>
     <tr>
+      <td>25</td>
       <td>30</td>
       <td>33</td>
       <td>35</td>
@@ -606,6 +669,7 @@ footer{
       <td>70</td>
     </tr>
     <tr>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -630,14 +694,19 @@ footer{
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>0</td>
     </tr>
   </table>
+
+<hr>
+
+<div style="border-bottom : 2px solid #a37ec2; width : 75px;"><h2>메모장</h2></div>
 
 <div style="margin : 30px 0 60px;">
   <table class="table2">
     <tr style="background-color: #ecebeb;">
      <th class="tb_No">No</th>
-     <th class="tb_title">제목</th>
+     <th>제목</th>
      <th class="tb_lge">언어</th>
      <th class="tb_date">날짜</th>
     </tr>
@@ -684,10 +753,49 @@ footer{
     <a href="#">&raquo;</a>
    </div>
 
-    <a href="#" class="tb_write">글 작성</a>
-
   </div>
 </div>
+
+    <div class="contain">
+      <form action="#">
+        <div class="row">
+          <div class="col-1">
+            <label for="title">제목</label>
+          </div>
+          <div class="col-2">
+            <input type="text" id="title" name="title" placeholder="제목 입력..">
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-1">
+            <label for="language">언어</label>
+          </div>
+        <div class="col-2">
+          <select id="language" name="language">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <label for="subject">내용</label>
+        </div>
+        <div class="col-2">
+          <textarea id="subject" name="subject" placeholder="내용 입력.." style="height:200px"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="button" value="작성">
+      </div>
+
+    </form>
+  </div>
 
   </main>
 </section>

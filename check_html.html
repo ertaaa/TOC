@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TOC-WEB</title>
+  <title>TOC-check-html</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
@@ -10,7 +10,7 @@ body {
   background: #ffffff;
   font-family:Verdana;
   color:#363636;
-  min-width: 1600px;
+  min-width: 1300px;
 }
 /*TOC헤더*/
 header{
@@ -208,6 +208,31 @@ header{
   transform: rotateY(180deg);
 }
 
+.search-container {
+  float: right;
+}
+.search {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 7px 10px 7px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top : 5px;
+}
+.search:focus {
+    width: 180px;
+}
+.search-container button {
+  float: right;
+  padding: 7px 10px;
+  margin-top: 6px;
+  cursor: pointer;
+  border: none;
+}
+
 /*왼쪽 아이콘*/
 .icon-bar {
   width: 60px;
@@ -255,9 +280,8 @@ header{
   width:65%;
 }
 .checkbox {
-  /*border : 1px solid #a37ec2;    없는게 예쁨*/
-  height : 217px; 
-  width : 1000px;
+  height : 191px; 
+  width : 880px;
   margin: 50px auto 20px;
   background : url(images/ckbox.jpg) no-repeat 0 0;
   text-align: center;
@@ -343,31 +367,6 @@ header{
   text-align : center;
   text-decoration : none;
   cursor : pointer;
-}
-
-.search-container {
-  float: right;
-}
-.search {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-    padding: 7px 10px 7px 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    margin-top : 5px;
-}
-.search:focus {
-    width: 180px;
-}
-.search-container button {
-  float: right;
-  padding: 7px 10px;
-  margin-top: 6px;
-  cursor: pointer;
-  border: none;
 }
 
 footer{
@@ -514,9 +513,9 @@ footer{
 
   <div class="checkbox">
     <div style="text-align : center; padding-top : 30px;">
-      <span style="font-size : 23px;">웹 개발 시작 전 <strong>자가 진단</strong>을 통해 고객님의 개발위치를 알아보세요.</span>
-      <span class="txt" style="font-size : 18px; margin-top: 15px;">이 확인은 공식적인 것이 아니며,<br>웹 개발에 대해 얼마나 많이 알고 있는지, 알지 못하는지를 확인하는 것입니다.</span>
-      <span class="skip" style="margin-top: 35px; font-size : 14px;">자가 진단을 하지 않고 시작하시겠습니까?<a href="#">자가진단 Skip</a></span>
+      <span style="font-size : 20px;">웹 개발 시작 전 <strong>자가 진단</strong>을 통해 고객님의 개발위치를 알아보세요.</span>
+      <span class="txt" style="font-size : 15px; margin-top: 19px;">이 확인은 공식적인 것이 아니며,<br>웹 개발에 대해 얼마나 많이 알고 있는지, 알지 못하는지를 확인하는 것입니다.</span>
+      <span class="skip" style="font-size : 15px; margin-top: 35px;">자가 진단을 하지 않고 시작하시겠습니까?<a href="#">자가진단 Skip</a></span>
     </div>
   </div>
 
@@ -587,7 +586,7 @@ footer{
       </div>
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk5" value="1"> &lt;body style = "background-color : yellow;"&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk5" value="2"> &lt;body bg = "yellow"&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk5" value="2"> &lt;body bg = "yellow"&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk5" value="3"> &lt;배경&gt; 노란색 &lt;/배경&gt;</label>
       </div>
     </div>
@@ -609,9 +608,9 @@ footer{
       </div>
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk7" value="1"> &lt;a&gt; http://www.google.com &lt;a&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk7" value="2"> &lt;a url="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
-        <br><br><label class="chkbox"><input type="radio" name="selfchk7" value="3"> &lt;a href="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk7" value="4"> &lt;a name="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
+        <label class="chkbox"><input type="radio" name="selfchk7" value="2"> &lt;a name="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk7" value="2"> &lt;a href="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk7" value="3"> &lt;a url="http://www.google.com"&gt; Google.com &lt;a&gt;</label>
       </div>
     </div>
 
@@ -645,7 +644,7 @@ footer{
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk10" value="1"> &lt;table&gt; &lt;tr&gt; &lt;tt&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk10" value="2"> &lt;table&gt; &lt;tr&gt; &lt;td&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk10" value="3"> &lt;thead&gt; &lt;body&gt; &lt;tr&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk10" value="3"> &lt;thead&gt; &lt;body&gt; &lt;tr&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk10" value="4"> &lt;table&gt; &lt;head&gt; &lt;tfoot&gt;</label>
       </div>
     </div>
@@ -691,7 +690,7 @@ footer{
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk14" value="1"> &lt;input type = "textfield"&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk14" value="2"> &lt;input type = "text"&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk14" value="3"> &lt;textfield&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk14" value="3"> &lt;textfield&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk14" value="4"> &lt;textinput type = "text"&gt;</label>
       </div>
     </div>
@@ -779,7 +778,7 @@ footer{
       </div>
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk22" value="1"> &lt;! DOCTYPE HTML PUBLIC "- //W3C//DTD HTML 5.0 // KO" "http://www.google.com"&gt;</label>
-        <label class="chkbox"><input type="radio" name="selfchk22" value="2"> &lt;! DOCTYPE html&gt;</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk22" value="2"> &lt;! DOCTYPE html&gt;</label>
         <label class="chkbox"><input type="radio" name="selfchk22" value="3"> &lt;! DOCTYPE HTML5&gt;</label>
       </div>
     </div>
@@ -835,7 +834,7 @@ footer{
         <label class="chkbox"><input type="radio" name="selfchk27" value="1"> 요소의 내용을 편집할 수 있는지 여부를 지정</label>
         <label class="chkbox"><input type="radio" name="selfchk27" value="2"> 문자열 내에서 발견 된 첫 번째 항목의 위치를 반환</label>
         <br><br><label class="chkbox"><input type="radio" name="selfchk27" value="3"> 서버에서 컨텐츠 업데이트</label>
-        <label class="chkbox"><input type="radio" name="selfchk27" value="4"> 요소의 컨텍스트 메뉴를 지정. 사용자가 요소를 마우스 로느쪽 버튼으로 클릭하면 메뉴가 나타난다.</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk27" value="4"> 요소의 컨텍스트 메뉴를 지정. 사용자가 요소를 마우스 오른쪽 버튼으로 클릭하면 메뉴가 나타난다.</label>
       </div>
     </div>
 
@@ -879,7 +878,7 @@ footer{
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk30" value="1"> 드래그 가능한 요소만들기</label>
         <label class="chkbox"><input type="radio" name="selfchk30" value="2"> MySQL에서 데이터 조작하기</label>
-        <label class="chkbox"><input type="radio" name="selfchk30" value="3"> 그래픽 그리기</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk30" value="3"> 그래픽 그리기</label>
         <label class="chkbox"><input type="radio" name="selfchk30" value="3"> 데이터베이스 레코드 표시</label>
       </div>
     </div>
@@ -938,7 +937,7 @@ footer{
       <div class="cont">
         <label class="chkbox"><input type="radio" name="selfchk35" value="1"> 페이지 콘텐츠를 제외한 콘텐츠</label>
         <label class="chkbox"><input type="radio" name="selfchk35" value="2"> 페이지 왼쪽에 표시할 탐색 목록</label>
-        <label class="chkbox"><input type="radio" name="selfchk35" value="3"> ASCII 문자 세트. 인터넷상의 컴퓨터 간에 정보를 보내는 방법</label>
+        <br><br><label class="chkbox"><input type="radio" name="selfchk35" value="3"> ASCII 문자 세트. 인터넷상의 컴퓨터 간에 정보를 보내는 방법</label>
       </div>
     </div>
 
