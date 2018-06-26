@@ -243,6 +243,7 @@ header{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+    z-index : 800;
     transition: 0.3s;
 }
 .icon-bar a {
@@ -357,6 +358,7 @@ main hr {
     padding: 8px;
 }
 .table tr:nth-child(even){background-color: #f2f2f2}
+.table td {font-size : 14px;}
 
 .table2 {
     font-family: arial, sans-serif;
@@ -369,9 +371,10 @@ main hr {
     text-align: center;
     padding: 8px;
 }
-.table2 .tb_title { text-overflow : ellipsis; text-align: left;}
-.table2 .tb_lge { width : 140px;}
-.table2 .tb_date { width : 120px;}
+.table2 td { font-size : 14px; }
+tr .tb_title { text-overflow : ellipsis; text-align: left; padding-left : 30px;}
+.tb_lge { width : 50px;}
+.tb_date { width : 70px;}
 
 .page_c { display : inline-block; margin-top : 10px;}
 .page_c a {
@@ -456,7 +459,7 @@ footer {
   padding : 30px;
   margin-top : 0px;
   font-weight: 400;
-  font-size : 12px;
+  font-size : 11px;
   height : 120px;
 }
 footer div {
@@ -595,11 +598,11 @@ footer div {
   </div>
 
 <div class="icon-bar">
-  <a href="TOC-in.html" class="icon-t"><img src="images/icon1.png" width="15" height="17"></a> 
-  <a href="#" class="icon-m"><img src="images/icon2.png" width="17" height="15"></a> 
-  <a href="#" class="icon-m"><img src="images/icon3.png" width="14" height="20"></a> 
-  <a href="#" class="icon-m"><img src="images/icon4.png" width="15" height="17"></a> 
-  <a href="myskills.html" class="icon-b"><img src="images/icon5.png" width="15" height="17"></a> 
+  <a href="TOC-in.html" class="icon-t" title="홈페이지"><img src="images/icon1.png" width="15" height="17"></a> 
+  <a href="#" class="icon-m" title="메세지"><img src="images/icon2.png" width="17" height="15"></a> 
+  <a href="#" class="icon-m" title="공유 및 저장"><img src="images/icon3.png" width="14" height="20"></a> 
+  <a href="#" class="icon-m" title="프로필"><img src="images/icon4.png" width="15" height="17"></a> 
+  <a href="myskills.html" class="icon-b" title="현재 진행상태"><img src="images/icon5.png" width="15" height="17"></a> 
 </div>
 
 <section class="content">
@@ -715,6 +718,47 @@ footer div {
 
 <div style="border-bottom : 2px solid #a37ec2; width : 75px;"><h2>메모장</h2></div>
 
+    <div class="contain">
+      <form action="#">
+        <div class="row">
+          <div class="col-1">
+            <label for="title">제목</label>
+          </div>
+          <div class="col-2">
+            <input type="text" id="title" name="title" placeholder="제목 입력..">
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-1">
+            <label for="language">언어</label>
+          </div>
+        <div class="col-2">
+          <select id="language" name="language">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <label for="subject">내용</label>
+        </div>
+        <div class="col-2">
+          <textarea id="subject" name="subject" placeholder="내용 입력.." style="height:200px"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="button" value="작성">
+      </div>
+
+    </form>
+  </div>
+
 <div style="margin : 30px 0 60px;">
   <table class="table2">
     <tr style="background-color: #ecebeb;">
@@ -769,53 +813,12 @@ footer div {
   </div>
 </div>
 
-    <div class="contain">
-      <form action="#">
-        <div class="row">
-          <div class="col-1">
-            <label for="title">제목</label>
-          </div>
-          <div class="col-2">
-            <input type="text" id="title" name="title" placeholder="제목 입력..">
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="col-1">
-            <label for="language">언어</label>
-          </div>
-        <div class="col-2">
-          <select id="language" name="language">
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="javascript">JavaScript</option>
-            <option value="php">PHP</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-1">
-          <label for="subject">내용</label>
-        </div>
-        <div class="col-2">
-          <textarea id="subject" name="subject" placeholder="내용 입력.." style="height:200px"></textarea>
-        </div>
-      </div>
-
-      <div class="row">
-        <input type="button" value="작성">
-      </div>
-
-    </form>
-  </div>
-
   </main>
 </section>
 
 <footer>
   <div>
-    강의 : 웹프로그래밍기초<br>
+    학과 : 소프트웨어학과 | 강의 : 웹프로그래밍기초<br>
     홈페이지명 : TOC | 개발자 : 이형준 | 학번 : 1312050<br><br>
     <div style ="text-align : center; margin-bottom : 20px;">
       <a href="#" class="ft_icon"><img src="images/google_icon.png" width="35" height="35"></a>
@@ -823,10 +826,10 @@ footer div {
       <a href="#" class="ft_icon"><img src="images/kakao_icon.png" width="35" height="35"></a>
       <a href="#" class="ft_icon"><img src="images/naver_icon.png" width="35" height="35"></a>
   </div>
+    Copyright &copy; LeeHyeongJun<br>
     Copyright &copy; w3schools.com<br>
     Copyright &copy; opentutorials.org
   </div>
-  
 </footer>
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>

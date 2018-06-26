@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TOC-leady</title>
+  <title>TOC-공지사항</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 /*패드 및 모바일 버전 적용안된 것*/
+
 body {
   margin:0;
   background: #ffffff;
@@ -47,7 +48,8 @@ header{
   padding: 0;
   margin: 0;
   line-height: 1;
-  padding : 0 17%;
+  padding-left:17%;
+  padding-right:17%;
 }
 /*상단바 메뉴 */
 .menu > ul {
@@ -232,32 +234,119 @@ header{
   border: none;
 }
 
-.checkbox {
-  height : 902px; 
-  width : 700px;
-  margin: 50px auto;
+
+/*상단바 밑에*/
+.content{
+  display:flex;
+  margin:auto;
+  width:65%;
+}
+
+
+/*왼쪽 메뉴*/
+.left-bar {
+  font-family : Arial;
+  max-width:150px;
+  flex-basis: 18%;
+  flex-shrink: 0;
+  width:100%;
+  text-align:center;
+  background-color : #ffffff;
+  margin-top:0px;
+}
+.left-bar a {
+  padding : 12px 2px 15px 12px;
+  border : none;
+  border-bottom : 1px solid #dcdcdc;
+  font-size : 12px;
+  text-align:left;
+  text-decoration: none;
+  color:#363636;
+  display: block;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.left-bar .active {
+  background-color : #d9bef0;
+  color:#363636;
+  font-weight : bold;
+}
+.left-bar a:hover {
+  background-color : #d9bef0;
+  color:#363636;
+  font-weight : bold;
+}
+
+main{
+  padding : 0 50px;
+  min-width : 600px;
+  max-width : 900px;
+}
+main hr {
+  margin : 40px 0;
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+.board{
+  margin : 40px 0;
+  border: 0;
+  border-bottom: 1px solid #e3e3e3;
+  clear : both;
+}
+.board_title { margin-top : 20px; }
+
+.leady {
+  height : 773px; 
+  width : 600px;
+  margin: 40px auto;
   background : url(images/leadypage.jpg) no-repeat 0 0;
   text-align: center;
 }
-.checkbox span {
-  display: block;
-}
-.txt strong {
-  color : #8d69ab;
-}
-.skip a{
-  background-color: #b2b2b2;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  width : 120px;
-  padding: 7px;
-  margin : 0 0 0 20px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
 
+.table2, .board_title {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.table2 td, th, .board_title td, th {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+.table2 td, .board_title td { font-size : 14px; }
+tr .tb_title { text-overflow : ellipsis; text-align: left; padding-left : 30px;}
+.tb_upload { width : 70px;}
+.tb_date { width : 70px;}
+.tb_lge { width : 50px;}
+
+.page_c { display : inline-block; margin-top : 10px;}
+.page_c a {
+  color: #363636;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+.page_c a.active {
+  background-color : #d9bef0;
+  color: #363636;
+}
+.page_c a:hover:not(.active) {background-color: #ddd;}
+
+.tb_write {
+  display: inline-block;
+  float : right;
+  padding : 5px;
+  font-size : 14px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #dddddd;
+  color: white;
+  border: none;
+  border-radius : 5px;
+}
 
 footer {
   background-color : #e5e5e5;
@@ -265,7 +354,7 @@ footer {
   padding : 30px;
   margin-top : 0px;
   font-weight: 400;
-  font-size : 12px;
+  font-size : 11px;
   height : 120px;
 }
 footer div {
@@ -278,6 +367,7 @@ footer div {
   display: inline-block;
   margin : 0 10px;
 }
+
 
 /*위로가기 버튼*/
 #myBtn {
@@ -301,116 +391,183 @@ footer div {
 </head>
 
 <body>
-<header>
-  <div style="padding: 0 15%;">
-    <a href="TOC.html" class="header-toc">T<span style="color:#bb89ee">O</span>C</a>
-    <div class="header-toc2">Training of Coding</div>
-  </div>
-</header>
+  <header>
+   <div style="padding: 0% 15% 0% 15%;">
+     <a href="TOC-in.html" class="header-toc">T<span style="color:#bb89ee">O</span>C</a>
+     <div class="header-toc2">Training of Coding</div>
+   </div>
+  </header>
 
-<div class='menu'>
-  <ul>
-    <li class='active sub'>
-      <a href='plz_sign.html'>WEB</a>
-      <ul>
-        <li class='sub'>
-          <a href='plz_sign.html'>HTML</a>
-          <ul>
+  <div class='menu'>
+   <ul>
+     <li class='active sub'>
+        <a href='WEB.html'>WEB</a>
+        <ul>
+          <li class='sub'>
+           <a href='HTML_1.html'>HTML</a>
+           <ul>
+              <li>
+                <a href='leadypage.html'>HTML 배우기</a>
+              </li>
+              <li class='last'>
+                <a href='leadypage.html'>HTML 참조</a>
+              </li>
+            </ul>
+          </li>
+          <li class='sub'>
+            <a href='leadypage.html'>CSS</a>
+            <ul>
+             <li>
+                <a href='leadypage.html'>CSS 배우기</a>
+              </li>
+              <li class='last'>
+                <a href='leadypage.html'>CSS 참조</a>
+              </li>
+           </ul>
+          </li>
+          <li class='sub'>
+            <a href='leadypage.html'>JavaScript</a>
+            <ul>
             <li>
-              <a href='#'>HTML 배우기</a>
+             <a href='leadypage.html'>JS 배우기</a>
+            </li>
+            <li>
+              <a href='leadypage.html'>JS 참조</a>
             </li>
             <li class='last'>
-              <a href='#'>HTML 참조</a>
+             <a href='leadypage.html'>JQuery</a>
             </li>
           </ul>
-        </li>
-        <li class='sub'>
-          <a href='plz_sign.html'>CSS</a>
-          <ul>
-            <li>
-              <a href='#'>CSS 배우기</a>
-            </li>
-            <li class='last'>
-              <a href='#'>CSS 참조</a>
-            </li>
-          </ul>
-        </li>
-        <li class='sub'>
-          <a href='plz_sign.html'>JavaScript</a>
-          <ul>
-          <li>
-            <a href='#'>JS 배우기</a>
           </li>
-          <li>
-            <a href='#'>JS 참조</a>
-          </li>
-          <li class='last'>
-            <a href='#'>JQuery</a>
-          </li>
+       </ul>
+      </li>
+      <li class='active sub'>
+        <a href='leadypage.html'>SURVER</a>
+        <ul>
+          <li class='sub'>
+            <a href='leadypage.html'>PHP</a>
+            <ul>
+              <li>
+                <a href='leadypage.html'>PHP 기본</a>
+              </li>
+              <li class='last'>
+                <a href='leadypage.html'>PHP 심화</a>
+              </li>
+            </ul>
+         </li>
+         <li class='sub'>
+            <a href='leadypage.html'>MySQL</a>
+            <ul>
+             <li>
+               <a href='leadypage.html'>DataBase</a>
+             </li>
+             <li>
+               <a href='leadypage.html'>SQL</a>
+             </li>
+             <li>
+               <a href='leadypage.html'>Node.js</a>
+             </li>
+             <li class='last'>
+               <a href='leadypage.html'>Linux</a>
+             </li>
+           </ul>
+         </li>
         </ul>
-        </li>
-      </ul>
-    </li>
-    <li class='active sub'>
-      <a href='plz_sign.html'>SURVER</a>
-      <ul>
-        <li class='sub'>
-          <a href='plz_sign.html'>PHP</a>
-          <ul>
-            <li>
-              <a href='#'>PHP 기본</a>
-            </li>
-            <li class='last'>
-              <a href='#'>PHP 심화</a>
-            </li>
-          </ul>
-        </li>
-        <li class='sub'>
-          <a href='plz_sign.html'>MySQL</a>
-          <ul>
-            <li>
-              <a href='#'>DataBase</a>
-            </li>
-            <li>
-              <a href='#'>SQL</a>
-            </li>
-            <li>
-              <a href='#'>Node.js</a>
-            </li>
-            <li class='last'>
-              <a href='#'>Linux</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href='plz_sign.html'>JAVA</a>
-    </li>
-    <li>
-      <a href='#'>ABOUT</a>
-    </li>
-    <li class='last' style="float:right;">
-      <a href='sign_in.html'>로그인</a>
-    </li>
-    <div class="search-container">
-      <form>
+      </li>
+      <li>
+       <a href='leadypage.html'>JAVA</a>
+      </li>
+      <li>
+       <a href='#'>ABOUT</a>
+      </li>
+      <li class='last' style="float:right;">
+       <a href='sign_in.html'>로그인</a>
+      </li>
+      <div class="search-container">
+       <form>
           <input type="text" class="search" name="search" placeholder="Search..">
           <button type="button" style="background-color:#a37ec2;"><img src="images/searchicon.png" width="15" height="15"></button>
-      </form>
-    </div>
-  </ul>
-</div>
+       </form>
+      </div>
+   </ul>
+  </div>
 
 <section class="content">
+  <div class="left-bar">
+    <h3 style="border-bottom: 3px solid #a37ec2; padding: 10px;">ABOUT</h3>
+    <a class="active" href="myskills.html" style="background-color : #d9bef0;">공지사항</a>
+    <a class="noactive" href="#">건의사항</a>
+  </div>
 
-<div class="checkbox"></div>
+<main>
+  <div style="border-bottom : 2px solid #a37ec2; width : 100px;"><h2>공지사항</h2></div>
 
+  <table class="board_title">
+    <tr style="background-color: #ecebeb;">
+      <th class="tb_No">No</th>
+      <th>제목</th>
+      <th class="tb_upload">글쓴이</th>
+      <th class="tb_date">날짜</th>
+      <th class="tb_lge">조횟수</th>
+    </tr>
+    <tr>
+      <td class="tb_No">2</td>
+      <td class="tb_title">컨텐츠 준비 중입니다.</td>
+      <td class="tb_upload">운영자</td>
+      <td class="tb_date">18.06.15</td>
+      <td class="tb_lge">27</td>
+    </tr>
+  </table>
+
+  <div class="board">
+    <div class="leady"></div>
+  </div>
+
+  <div style="margin : 30px 0 60px;">
+    <table class="table2">
+      <tr style="background-color: #ecebeb;">
+        <th class="tb_No">No</th>
+        <th>제목</th>
+        <th class="tb_upload">글쓴이</th>
+        <th class="tb_date">날짜</th>
+        <th class="tb_lge">조횟수</th>
+      </tr>
+      <tr>
+        <td class="tb_No">2</td>
+        <td class="tb_title">컨텐츠 준비 중입니다.</td>
+        <td class="tb_upload">운영자</td>
+        <td class="tb_date">18.06.15</td>
+        <td class="tb_lge">27</td>
+      </tr>
+      <tr>
+        <td class="tb_No">1</td>
+        <td class="tb_title">제목없음</td>
+        <td class="tb_upload">운영자</td>
+        <td class="tb_date">18.06.14</td>
+        <td class="tb_lge">0</td>
+      </tr>
+    </table>
+
+    <div style="margin : 20px auto; display : block; text-align : center;">
+      <div class="page_c">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
 </section>
 
 <footer>
   <div>
-    강의 : 웹프로그래밍기초<br>
+    학과 : 소프트웨어학과 | 강의 : 웹프로그래밍기초<br>
     홈페이지명 : TOC | 개발자 : 이형준 | 학번 : 1312050<br><br>
     <div style ="text-align : center; margin-bottom : 20px;">
       <a href="#" class="ft_icon"><img src="images/google_icon.png" width="35" height="35"></a>
@@ -418,10 +575,10 @@ footer div {
       <a href="#" class="ft_icon"><img src="images/kakao_icon.png" width="35" height="35"></a>
       <a href="#" class="ft_icon"><img src="images/naver_icon.png" width="35" height="35"></a>
   </div>
+    Copyright &copy; LeeHyeongJun<br>
     Copyright &copy; w3schools.com<br>
     Copyright &copy; opentutorials.org
   </div>
-  
 </footer>
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -440,6 +597,5 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 </script>
-
 </body>
 </html>

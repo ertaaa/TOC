@@ -218,6 +218,7 @@ header{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+    z-index : 800;
     transition: 0.3s;
 }
 .icon-bar a {
@@ -254,6 +255,7 @@ a img {
   margin-bottom : 100px;
   width:65%;
 }
+
 
 /*왼쪽 메뉴*/
 .left-bar {
@@ -384,13 +386,87 @@ ul li {
   float : left;
 }
 
+.bf-nx{
+  margin-top : 20px;
+  padding : 0 50px;
+}
+.bf-nx a {
+  background-color: #a37ec2;
+  border: none;
+  border-radius : 5px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 #a083ba;
+}
+
+/*--------------댓글--------------*/
+#comment {
+  margin : 180px 0 30px; 
+  border-bottom : 2px solid #dcdcdc; 
+  border-top : 2px solid #dcdcdc;
+}
+.comment_write {
+  border-bottom : 1px solid #dcdcdc;
+  padding : 20px 13px;
+  display : inline-block;
+  width : 95%;
+}
+.comment_write img {
+  float : left;
+  text-align : center;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+    float : left;
+    width : 78%;
+    margin-left : 15px;
+}
+.cmt_upload {
+  float : right;
+  border : none;
+  border-radius : 5px;
+  padding : 10px;
+  margin : 5px;
+  font-size : 15px;
+  background-color : #dcdcdc;
+  color : #363636;
+  cursor : pointer;
+}
+.cmt_board {
+  padding : 20px 13px;
+  display : inline-block;
+  width : 95%;
+}
+.cmt_board:hover { background-color : #f2f2f2; }
+.cmt_con { display: inline-block; margin-left : 15px;}
+.cmt_name { font-weight: bold; font-size : 18px;}
+.cmt_con_s { font-size : 13px; margin-top : 7px;}
+.cmt_re { 
+  font-size : 13px;
+  float : right; 
+  padding : 30px 10px 0 0;
+  text-decoration: none;
+}
+
+
 footer {
   background-color : #e5e5e5;
   text-align : center;
   padding : 30px;
   margin-top : 0px;
   font-weight: 400;
-  font-size : 12px;
+  font-size : 11px;
   height : 120px;
 }
 footer div {
@@ -528,11 +604,11 @@ footer div {
   </div>
 
 <div class="icon-bar">
-  <a href="TOC-in.html" class="icon-t"><img src="images/icon1.png" width="15" height="17"></a> 
-  <a href="#" class="icon-m"><img src="images/icon2.png" width="17" height="15"></a> 
-  <a href="#" class="icon-m"><img src="images/icon3.png" width="14" height="20"></a> 
-  <a href="#" class="icon-m"><img src="images/icon4.png" width="15" height="17"></a> 
-  <a href="myskills.html" class="icon-b"><img src="images/icon5.png" width="15" height="17"></a> 
+  <a href="TOC-in.html" class="icon-t" title="홈페이지"><img src="images/icon1.png" width="15" height="17"></a> 
+  <a href="#" class="icon-m" title="메세지"><img src="images/icon2.png" width="17" height="15"></a> 
+  <a href="#" class="icon-m" title="공유 및 저장"><img src="images/icon3.png" width="14" height="20"></a> 
+  <a href="#" class="icon-m" title="프로필"><img src="images/icon4.png" width="15" height="17"></a> 
+  <a href="myskills.html" class="icon-b" title="현재 진행상태"><img src="images/icon5.png" width="15" height="17"></a> 
 </div>
 
 <section class="content">
@@ -657,13 +733,51 @@ footer div {
       <li><strong>2017년</strong> 2016년 12월 14일 HTML5.2 권고안 발표</li>
     </ul>
 
-  </main>
+    <hr>
 
+    <div class="bf-nx">
+      <a href="WEB.html">이전</a>
+      <a href="leadypage.html" style="float : right;">다음</a>
+    </div>
+
+
+
+    <div id="comment">
+      <div class="comment_write">
+        <img src="images/cmt.jpg" width="40" height="40">
+
+              <textarea id="subject" name="subject" placeholder="댓글 입력.." style="height:45px;"></textarea>
+
+          <input type="button" value="등록" class="cmt_upload">
+      </div>
+
+      <div class="cmt_board">
+        <img src="images/cmt2.jpg" width="40" height="40">
+        <div class="cmt_con">
+          <div class="cmt_name">보노보노</div>
+          <div class="cmt_con_s">두 번째 댓글 작성했습니다.</div>
+        </div>
+        <a href="#" class="cmt_re">신고</a>
+        <a href="#" class="cmt_re">답글</a>
+      </div>
+
+      <div class="cmt_board">
+        <img src="images/cmt.jpg" width="40" height="40">
+        <div class="cmt_con">
+          <div class="cmt_name">홍길동</div>
+          <div class="cmt_con_s">첫 번째 댓글 작성했습니다.</div>
+        </div>
+        <a href="#" class="cmt_re">신고</a>
+        <a href="#" class="cmt_re">답글</a>
+      </div>
+    </div>
+
+  </main>
 </section>
 
 <footer>
   <div>
-    강의 : 웹프로그래밍기초<br>
+    학과 : 소프트웨어학과 | 강의 : 웹프로그래밍기초<br>
     홈페이지명 : TOC | 개발자 : 이형준 | 학번 : 1312050<br><br>
     <div style ="text-align : center; margin-bottom : 20px;">
       <a href="#" class="ft_icon"><img src="images/google_icon.png" width="35" height="35"></a>
@@ -671,10 +785,10 @@ footer div {
       <a href="#" class="ft_icon"><img src="images/kakao_icon.png" width="35" height="35"></a>
       <a href="#" class="ft_icon"><img src="images/naver_icon.png" width="35" height="35"></a>
   </div>
+    Copyright &copy; LeeHyeongJun<br>
     Copyright &copy; w3schools.com<br>
     Copyright &copy; opentutorials.org
   </div>
-  
 </footer>
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
