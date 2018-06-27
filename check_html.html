@@ -435,7 +435,6 @@ footer div {
   border : 2px solid #d9c6de;
   border-radius: 5px;
   font-size : 12px;
-  z-index: 500;
 }
 .msg_bck {
   border-radius: 5px;
@@ -454,9 +453,17 @@ footer div {
 .msg_line1 img, .msg_line1 span { float : left; }
 .msg_line1 span { margin-left : 5px; }
 .msg_line1 p { margin:0 0 0 5px; font-size:4px; float:left;}
+.time-right {
+    float: right;
+    color: #aaa;
+}
 
 .msg_line2 img, .msg_line2 span { float : right; }
 .msg_line2 span { margin-right : 5px; }
+.time-left {
+    float: left;
+    color: #aaa;
+}
 
 .msg_in {
   width : 170px;
@@ -482,7 +489,7 @@ footer div {
   transition: 0.3s;
 }
 .closebtn:hover {
-    color: #a083ba;
+  color: #a083ba;
 }
 
 </style>
@@ -592,7 +599,7 @@ footer div {
 
 <div class="icon-bar">
   <a href="TOC-in.html" class="icon-t" title="홈페이지"><img src="images/icon1.png" width="15" height="17"></a> 
-  <a href="#" class="icon-m" title="메세지"><img src="images/icon2.png" width="17" height="15"></a> 
+  <a href="#" class="icon-m" title="메세지함"><img src="images/icon2.png" width="17" height="15"></a> 
   <a href="#" class="icon-m" title="공유 및 저장"><img src="images/icon3.png" width="14" height="20"></a> 
   <a href="#" class="icon-m" title="프로필"><img src="images/icon4.png" width="15" height="17"></a> 
   <a href="myskills.html" class="icon-b" title="현재 진행상태"><img src="images/icon5.png" width="15" height="17"></a> 
@@ -608,11 +615,11 @@ footer div {
     <div class="msg_line1">
       <img src="images/msg.png" width="30" height="30">
       <p>홍길동</p><br>
-      <span>안녕하세요.</span>
+      <span>안녕하세요.</span><span class="time-right">13:27</span>
     </div>
     <div class="msg_line2">
       <img src="images/msg.png" width="30" height="30">
-      <span>반가워요.</span>
+      <span>반가워요.</span><span class="time-left">13:28</span>
     </div>
 
   </div>
