@@ -384,7 +384,6 @@ header{
 .header4 div {
   border:5px solid #a37ec2;
   padding:30px 15px 30px 15px;
-  max-width: 1000px;
   min-width: 500px;
 }
 .header4 span {
@@ -473,6 +472,84 @@ footer div {
 #myBtn:hover {
   background-color: #555;
 }
+
+
+/*----------메세지---------*/
+.msg {
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #a083ba;
+  color: white;
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 5px;
+}
+#mymsg {
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  width: 230px;
+  height : 400px;
+  padding: 5px;
+  text-align: left;
+  background-color: #f1f1f1;
+  border : 2px solid #d9c6de;
+  border-radius: 5px;
+  font-size : 12px;
+  z-index: 500;
+}
+.msg_bck {
+  border-radius: 5px;
+  background-color : #fff;
+  margin : 10px 2px 0;
+  height : 290px;
+  border: 1px solid #dadada;
+  padding : 8px;
+}
+.msg_line1, .msg_line2 { padding-bottom : 40px; }
+.msg_line1 span, .msg_line2 span { 
+  border: 1px solid #e0e0e0; 
+  border-radius: 5px; 
+  padding : 3px;
+}
+.msg_line1 img, .msg_line1 span { float : left; }
+.msg_line1 span { margin-left : 5px; }
+.msg_line1 p { margin:0 0 0 5px; font-size:4px; float:left;}
+
+.msg_line2 img, .msg_line2 span { float : right; }
+.msg_line2 span { margin-right : 5px; }
+
+.msg_in {
+  width : 170px;
+  height : 50px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  margin-top : 10px;
+  border: 1px solid #dadada;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.closebtn {
+  display : block;
+  margin-left: 15px;
+  color: #dcdcdc;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+    color: #a083ba;
+}
+
 </style>
 </head>
 
@@ -585,6 +662,39 @@ footer div {
   <a href="#" class="icon-m" title="프로필"><img src="images/icon4.png" width="15" height="17"></a> 
   <a href="myskills.html" class="icon-b" title="현재 진행상태"><img src="images/icon5.png" width="15" height="17"></a> 
 </div>
+
+
+<button class="msg" onclick="msg()"><img src="images/icon2.png" width="17" height="15"></button>
+
+<div id="mymsg">
+  <div class="closebtn" onclick="this.parentElement.style.display='none';">&times;</div> 
+  <p style="margin : 3px 0 0 5px; font-size : 13px;">메세지<p>
+  <div class="msg_bck">
+    <div class="msg_line1">
+      <img src="images/msg.png" width="30" height="30">
+      <p>홍길동</p><br>
+      <span>안녕하세요.</span>
+    </div>
+    <div class="msg_line2">
+      <img src="images/msg.png" width="30" height="30">
+      <span>반가워요.</span>
+    </div>
+
+  </div>
+  <input type="text" class="msg_in" name="msg_in" placeholder="메세지 입력..">
+</div>
+
+<script>
+function msg() {
+    var x = document.getElementById("mymsg");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
 
 <div class="header3">
   <h1>TOC</h1>

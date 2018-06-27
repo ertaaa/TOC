@@ -25,8 +25,8 @@ header{
   font-size:35px;
   font-weight: 700;
   text-decoration: none;
+  color:#363636;
 }
-.header a:link, a:visited, a:active, a:focus { color:#363636; }
 .header-toc2{
   padding:50px 30px 0px 15px;
   text-align:right
@@ -416,11 +416,7 @@ ul li {
   display : inline-block;
   width : 95%;
 }
-.comment_write img {
-  float : left;
-  text-align : center;
-}
-
+.cmt_img { float : left; }
 textarea {
     width: 100%;
     padding: 14px;
@@ -448,15 +444,31 @@ textarea {
   display : inline-block;
   width : 95%;
 }
-.cmt_board:hover { background-color : #f2f2f2; }
-.cmt_con { display: inline-block; margin-left : 15px;}
-.cmt_name { font-weight: bold; font-size : 18px;}
-.cmt_con_s { font-size : 13px; margin-top : 7px;}
-.cmt_re { 
+.cmt_board span {
+  background-color : #dcdcdc;
+  float : right;
   font-size : 13px;
+  cursor : pointer;
+  padding : 0 3px;
+  color:#fff;
+}
+.cmt_board_re { 
+  padding : 15px 15px 15px 20px;
+  display : inline-block;
+  width : 94%;
+}
+.cmt_board_re p { float:left; margin:5px 5px 0 0; cursor : default;}
+.cmt_con { display: inline-block; margin-left : 15px; float:left;}
+.cmt_name, .cmt_name_re { font-weight: bold; font-size : 14px; cursor : pointer;}
+.cmt_con_s, .cmt_con_s_re { font-size : 12px; margin-top : 5px;}
+
+.cmt_board:hover,.cmt_board_re:hover { background-color : #f2f2f2; }
+.cmt_re, .cmt_re2 { 
+  font-size : 12px;
   float : right; 
-  padding : 30px 10px 0 0;
+  margin : 25px 10px 0 0;
   text-decoration: none;
+  color : #363636;
 }
 
 
@@ -498,6 +510,84 @@ footer div {
 #myBtn:hover {
   background-color: #555;
 }
+
+
+/*----------메세지---------*/
+.msg {
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #a083ba;
+  color: white;
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 5px;
+}
+#mymsg {
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  width: 230px;
+  height : 400px;
+  padding: 5px;
+  text-align: left;
+  background-color: #f1f1f1;
+  border : 2px solid #d9c6de;
+  border-radius: 5px;
+  font-size : 12px;
+  z-index: 500;
+}
+.msg_bck {
+  border-radius: 5px;
+  background-color : #fff;
+  margin : 10px 2px 0;
+  height : 290px;
+  border: 1px solid #dadada;
+  padding : 8px;
+}
+.msg_line1, .msg_line2 { padding-bottom : 40px; }
+.msg_line1 span, .msg_line2 span { 
+  border: 1px solid #e0e0e0; 
+  border-radius: 5px; 
+  padding : 3px;
+}
+.msg_line1 img, .msg_line1 span { float : left; }
+.msg_line1 span { margin-left : 5px; }
+.msg_line1 p { margin:0 0 0 5px; font-size:4px; float:left;}
+
+.msg_line2 img, .msg_line2 span { float : right; }
+.msg_line2 span { margin-right : 5px; }
+
+.msg_in {
+  width : 170px;
+  height : 50px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  margin-top : 10px;
+  border: 1px solid #dadada;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.closebtn {
+  display : block;
+  margin-left: 15px;
+  color: #dcdcdc;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+    color: #a083ba;
+}
+
 </style>
 </head>
 
@@ -610,6 +700,39 @@ footer div {
   <a href="#" class="icon-m" title="프로필"><img src="images/icon4.png" width="15" height="17"></a> 
   <a href="myskills.html" class="icon-b" title="현재 진행상태"><img src="images/icon5.png" width="15" height="17"></a> 
 </div>
+
+
+<button class="msg" onclick="msg()"><img src="images/icon2.png" width="17" height="15"></button>
+
+<div id="mymsg">
+  <div class="closebtn" onclick="this.parentElement.style.display='none';">&times;</div> 
+  <p style="margin : 3px 0 0 5px; font-size : 13px;">메세지<p>
+  <div class="msg_bck">
+    <div class="msg_line1">
+      <img src="images/msg.png" width="30" height="30">
+      <p>홍길동</p><br>
+      <span>안녕하세요.</span>
+    </div>
+    <div class="msg_line2">
+      <img src="images/msg.png" width="30" height="30">
+      <span>반가워요.</span>
+    </div>
+
+  </div>
+  <input type="text" class="msg_in" name="msg_in" placeholder="메세지 입력..">
+</div>
+
+<script>
+function msg() {
+    var x = document.getElementById("mymsg");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
 
 <section class="content">
   <div class="left-bar">
@@ -744,7 +867,7 @@ footer div {
 
     <div id="comment">
       <div class="comment_write">
-        <img src="images/cmt.jpg" width="40" height="40">
+        <img src="images/cmt.jpg" width="40" height="40" class="cmt_img">
 
               <textarea id="subject" name="subject" placeholder="댓글 입력.." style="height:45px;"></textarea>
 
@@ -752,7 +875,19 @@ footer div {
       </div>
 
       <div class="cmt_board">
-        <img src="images/cmt2.jpg" width="40" height="40">
+        <img src="images/cmt.jpg" width="40" height="40" class="cmt_img">
+        <div class="cmt_con">
+          <div class="cmt_name">테스트</div>
+          <div class="cmt_con_s">세 번째 댓글 테스트</div>
+        </div>
+        <span>X</span>
+        <a href="#" class="cmt_re">신고</a>
+        <a href="#" class="cmt_re">답글</a>
+        <a href="#" class="cmt_re">수정</a>
+      </div>
+
+      <div class="cmt_board">
+        <img src="images/cmt2.jpg" width="40" height="40" class="cmt_img">
         <div class="cmt_con">
           <div class="cmt_name">보노보노</div>
           <div class="cmt_con_s">두 번째 댓글 작성했습니다.</div>
@@ -761,8 +896,28 @@ footer div {
         <a href="#" class="cmt_re">답글</a>
       </div>
 
+      <div class="cmt_board_re"><p>ㄴ</p>
+        <img src="images/cmt.jpg" width="35" height="35" class="cmt_img">
+        <div class="cmt_con">
+          <div class="cmt_name_re">홍길동</div>
+          <div class="cmt_con_s_re">보노보노 귀엽네</div>
+        </div>
+        <a href="#" class="cmt_re2">신고</a>
+        <a href="#" class="cmt_re2">답글</a>
+      </div>
+
+      <div class="cmt_board_re"><p>ㄴ</p>
+        <img src="images/cmt2.jpg" width="35" height="35" class="cmt_img">
+        <div class="cmt_con">
+          <div class="cmt_name_re">보노보노</div>
+          <div class="cmt_con_s_re">ㄳㄳ</div>
+        </div>
+        <a href="#" class="cmt_re2">신고</a>
+        <a href="#" class="cmt_re2">답글</a>
+      </div>
+
       <div class="cmt_board">
-        <img src="images/cmt.jpg" width="40" height="40">
+        <img src="images/cmt.jpg" width="40" height="40" class="cmt_img">
         <div class="cmt_con">
           <div class="cmt_name">홍길동</div>
           <div class="cmt_con_s">첫 번째 댓글 작성했습니다.</div>
@@ -770,6 +925,7 @@ footer div {
         <a href="#" class="cmt_re">신고</a>
         <a href="#" class="cmt_re">답글</a>
       </div>
+
     </div>
 
   </main>
